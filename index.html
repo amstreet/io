@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMC Real Estate - The Residences on 4th</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            --color-bg-main: #FFFFFF;
+            --color-bg-secondary: #F9FAFB; /* Off-white */
+            --color-text-primary: #111827; /* Dark Gray */
+            --color-text-secondary: #4B5563; /* Medium Gray */
+            --color-header-bg: #0A192F; /* Deep Navy Blue from logo */
+            --color-accent: #3B82F6; /* Bright Blue */
+            --color-accent-hover: #2563EB; /* Darker Blue for Hover */
+        }
+        .bg-main { background-color: var(--color-bg-main); }
+        .bg-secondary { background-color: var(--color-bg-secondary); }
+        .bg-header { background-color: var(--color-header-bg); }
+        .bg-accent { background-color: var(--color-accent); }
+        .hover\:bg-accent-hover:hover { background-color: var(--color-accent-hover); }
+
+        .text-primary { color: var(--color-text-primary); }
+        .text-secondary { color: var(--color-text-secondary); }
+        .text-accent { color: var(--color-accent); }
+        .hover\:text-accent:hover { color: var(--color-accent); }
+
+        .ring-accent { --tw-ring-color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+
+    </style>
+</head>
+<body class="bg-main text-secondary">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-20 p-4 bg-header shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="EMC_logo_reverse.png" alt="EMC Real Estate Logo" class="h-14">
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-lg font-medium text-white hover:text-gray-300 transition duration-300">Home</a>
+                <a href="#floorplans" class="text-lg font-medium text-white hover:text-gray-300 transition duration-300">Floor Plans</a>
+                <a href="#gallery" class="text-lg font-medium text-white hover:text-gray-300 transition duration-300">Gallery</a>
+                <a href="#contact" class="text-lg font-medium text-white hover:text-gray-300 transition duration-300">Contact</a>
+            </nav>
+            <button class="md:hidden text-white" id="menu-btn">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-header bg-opacity-95 z-30">
+        <div class="flex justify-end p-6">
+            <button id="close-btn" class="text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center space-y-8 mt-16">
+            <a href="#home" class="text-2xl font-medium text-white hover:text-gray-300 transition duration-300">Home</a>
+            <a href="#floorplans" class="text-2xl font-medium text-white hover:text-gray-300 transition duration-300">Floor Plans</a>
+            <a href="#gallery" class="text-2xl font-medium text-white hover:text-gray-300 transition duration-300">Gallery</a>
+            <a href="#contact" class="text-2xl font-medium text-white hover:text-gray-300 transition duration-300">Contact</a>
+        </nav>
+    </div>
+
+
+    <!-- Hero and About Section -->
+    <section id="home" class="relative flex flex-col items-center justify-center bg-main pt-32 pb-20">
+        <div class="text-center px-4">
+            <img src="RESIDENCES_alpha.png" alt="The Residences on 4th Logo" class="w-64 md:w-96 mx-auto mb-8">
+            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter leading-tight mb-4 text-primary">Experience Unparalleled Urban Living</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-secondary">Discover a curated collection of modern homes in the heart of the city.</p>
+        </div>
+        <div class="container mx-auto px-6 mt-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-4xl font-bold mb-4 text-primary">Welcome to The Residences on 4th</h3>
+                <p class="text-lg text-secondary leading-relaxed">
+                    Nestled in a vibrant and sought-after neighborhood, The Residences on 4th offers a unique blend of contemporary design, sophisticated comfort, and urban convenience. Each residence has been meticulously crafted to provide a sanctuary from the bustling city, featuring open-concept layouts, high-end finishes, and an abundance of natural light. It's more than a home; it's a lifestyle.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Floor Plans Section -->
+    <section id="floorplans" class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-12 text-primary">Available Floor Plans</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Unit 01 -->
+                <a href="1212 4th St NW-Unit-01.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-01.jpg" alt="Floor Plan for Unit 01" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 01</h4>
+                    </div>
+                </a>
+                <!-- Unit 02 -->
+                <a href="1212 4th St NW-Unit-02.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-02.jpg" alt="Floor Plan for Unit 02" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 02</h4>
+                    </div>
+                </a>
+                <!-- Unit 03 -->
+                <a href="1212 4th St NW-Unit-03.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-03.jpg" alt="Floor Plan for Unit 03" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 03</h4>
+                    </div>
+                </a>
+                <!-- Unit 04 -->
+                <a href="1212 4th St NW-Unit-04.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-04.jpg" alt="Floor Plan for Unit 04" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 04</h4>
+                    </div>
+                </a>
+                <!-- Unit 05 -->
+                <a href="1212 4th St NW-Unit-05.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-05.jpg" alt="Floor Plan for Unit 05" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 05</h4>
+                    </div>
+                </a>
+                <!-- Unit 06 -->
+                <a href="1212 4th St NW-Unit-06.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-06.jpg" alt="Floor Plan for Unit 06" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 06</h4>
+                    </div>
+                </a>
+                <!-- Unit 07 -->
+                <a href="1212 4th St NW-Unit-07.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-07.jpg" alt="Floor Plan for Unit 07" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 07</h4>
+                    </div>
+                </a>
+                <!-- Unit 08 -->
+                <a href="1212 4th St NW-Unit-08.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-08.jpg" alt="Floor Plan for Unit 08" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 08</h4>
+                    </div>
+                </a>
+                <!-- Unit 09 -->
+                <a href="1212 4th St NW-Unit-09.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-09.jpg" alt="Floor Plan for Unit 09" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 09</h4>
+                    </div>
+                </a>
+                <!-- Unit 10 -->
+                 <a href="1212 4th St NW-Unit-10.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-10.jpg" alt="Floor Plan for Unit 10" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 10</h4>
+                    </div>
+                </a>
+                <!-- Unit 11 -->
+                 <a href="1212 4th St NW-Unit-11.jpg" target="_blank" class="block rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 border">
+                    <img src="1212 4th St NW-Unit-11.jpg" alt="Floor Plan for Unit 11" class="w-full h-auto object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="text-xl font-semibold text-primary">Unit 11</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-main">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-12 text-primary">Property Gallery</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="View-01-Final_300.jpg" alt="Property View 1" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="View_02-day-Final_300.jpg" alt="Property View 2" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Features Section -->
+    <section class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-12 text-primary">Key Features</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="feature-item">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent mx-auto mb-4 text-white">
+                        <i data-lucide="home" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-primary">Modern Architecture</h4>
+                    <p class="text-secondary">Stunning contemporary design that stands out while complementing the neighborhood's charm.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent mx-auto mb-4 text-white">
+                        <i data-lucide="map-pin" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-primary">Prime Location</h4>
+                    <p class="text-secondary">Located moments away from top dining, shopping, and cultural landmarks.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent mx-auto mb-4 text-white">
+                        <i data-lucide="gem" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-primary">Luxury Finishes</h4>
+                    <p class="text-secondary">Premium materials and high-end appliances for an elevated living experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-main">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h3 class="text-4xl font-bold text-center mb-8 text-primary">Schedule a Viewing</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-secondary">Full Name</label>
+                        <input type="text" id="name" class="mt-1 block w-full bg-secondary border-gray-300 rounded-md shadow-sm py-3 px-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-secondary">Email Address</label>
+                        <input type="email" id="email" class="mt-1 block w-full bg-secondary border-gray-300 rounded-md shadow-sm py-3 px-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-secondary">Message</label>
+                        <textarea id="message" rows="4" class="mt-1 block w-full bg-secondary border-gray-300 rounded-md shadow-sm py-3 px-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-offset-2 ring-accent transition duration-300">
+                            Send Inquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-header py-8">
+        <div class="container mx-auto px-6 text-center text-gray-300">
+             <p>&copy; 2024 EMC Real Estate Group. All Rights Reserved.</p>
+             <div class="flex justify-center mt-4">
+                 <img src="Realtor EHO Black Transparent.png" alt="Realtor and Equal Housing Opportunity logos" class="h-12" style="filter: invert(1);">
+             </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                // Adjust for fixed header height
+                const headerOffset = 88; // Approximate height of the header
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
