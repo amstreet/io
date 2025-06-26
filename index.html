@@ -43,7 +43,6 @@
 </head>
 <body class="bg-light text-muted antialiased">
 
-    <!-- Header: Modern, clean, and sticky with a shadow on scroll -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-30 p-4 bg-light transition-shadow duration-300">
         <div class="container mx-auto flex justify-between items-center">
             <img src="EMC logo_final_Color.png" alt="EMC Real Estate Logo" class="h-12 md:h-24 w-auto" onerror="this.onerror=null;this.src='EMC_logo_reverse.png';">
@@ -52,7 +51,7 @@
                 <a href="#floorplans" class="font-medium text-header hover:text-accent transition duration-300">Floor Plans</a>
                 <a href="#gallery" class="font-medium text-header hover:text-accent transition duration-300">Gallery</a>
                 <a href="#contact" class="font-medium text-header hover:text-accent transition duration-300">Contact</a>
-                <a href="#contact" class="ml-4 px-5 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-full shadow-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-accent">
+                <a href="#contact-form" class="ml-4 px-5 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-full shadow-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-accent">
                     Schedule Tour
                 </a>
             </nav>
@@ -62,7 +61,6 @@
         </div>
     </header>
     
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-light z-40">
         <div class="flex justify-end p-6">
             <button id="close-btn" class="text-dark">
@@ -78,16 +76,16 @@
     </div>
 
     <main>
-        <!-- Hero Section: High-impact with a background image -->
         <section id="home" class="relative h-[70vh] min-h-[500px] md:h-screen flex items-center justify-center text-white bg-gray-800">
-            <!-- Background Image with Overlay -->
             <div class="absolute inset-0">
-                <img src="View-01-Final_300.jpg" alt="Exterior view of The Residences on 4th" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/6c757d/ffffff?text=Beautiful+Residence';">
+                <picture>
+                    <source media="(min-width: 1025px)" srcset="View-01-Final_300.jpg">
+                    <img src="View-01-Mobile.jpg" alt="Exterior view of The Residences on 4th" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/6c757d/ffffff?text=Beautiful+Residence';">
+                </picture>
                 <div class="absolute inset-0 bg-black opacity-50"></div>
             </div>
             
             <div class="relative z-10 text-center px-4">
-                <!-- MODIFIED: Added style="filter: brightness(0) invert(1);" to make the black PNG logo appear white -->
                 <img src="RESIDENCES_alpha.png" alt="The Residences on 4th Logo" class="w-64 md:w-96 mx-auto mb-6" style="filter: brightness(0) invert(1);" onerror="this.onerror=null;this.src='https://placehold.co/400x150/ffffff/000000?text=The+Residences+on+4th';">
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">
                     Experience Unparalleled Urban Living
@@ -98,19 +96,23 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-20 md:py-28 bg-light">
             <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">Welcome to The Residences on 4th</h2>
-                    <p class="text-lg text-muted leading-relaxed">
-                        Coming end of 2025 - 11 unit luxury condo building including (1) One Bedroom, (7) Two Bedroom,  and (3) Three or Four Bedroom units with parking available. Three of the residences will feature oversized private terraces, a truly exceptional luxury in this premier location. Each unit is designed with top-of-the-line finishes and layouts.
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark text-center">Welcome to The Residences on 4th</h2>
+                    <p class="text-lg text-muted leading-relaxed text-left">
+                        <span class="text-dark font-semibold">Coming Late 2025</span> — A Boutique Collection of 11 Luxury Residences<br>
+                        Introducing an exclusive new condominium building featuring 11 thoughtfully designed homes in a premier location. The collection includes:<br><br>
+                        •    (1) One-Bedroom<br>
+                        •    (7) Two-Bedroom<br>
+                        •    (3) Three- or Four-Bedroom residences<br><br>
+                        Each home offers refined layouts and top-of-the-line finishes, with select units showcasing oversized private terraces—an extraordinary luxury in this sought-after neighborhood. Parking will be available for added convenience.<br><br>
+                        This is elevated urban living at its finest.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Floor Plans Section -->
         <section id="floorplans" class="py-20 md:py-28 bg-off-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -118,7 +120,6 @@
                     <p class="text-lg text-muted mt-2">Click on a unit to view the detailed floor plan.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <!-- Cards with refined styling and subtle hover effects -->
                     <a href="1212 4th St NW-Unit-01.jpg" target="_blank" class="group block rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-light bg-light">
                         <img src="1212 4th St NW-Unit-01.jpg" alt="Floor Plan for Unit 01" class="w-full h-auto object-cover group-hover:opacity-90 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/eeeeee/cccccc?text=Floor+Plan';">
                         <div class="p-5">
@@ -189,7 +190,6 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
         <section id="gallery" class="py-20 md:py-28 bg-light">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -207,7 +207,6 @@
             </div>
         </section>
         
-        <!-- Key Features Section -->
         <section class="py-20 md:py-28 bg-off-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -240,44 +239,65 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-28 bg-light">
+        <section id="contact-form" class="py-20 md:py-28 bg-off-white">
             <div class="container mx-auto px-6">
-                <div class="max-w-2xl mx-auto bg-off-white p-8 md:p-12 rounded-xl shadow-lg border border-light">
-                    <h2 class="text-3xl font-bold text-center mb-2 text-dark">Schedule a Viewing</h2>
-                    <p class="text-center text-muted mb-8">Let us know when you're available for a tour.</p>
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-muted mb-1">Full Name</label>
-                            <input type="text" name="name" id="name" class="block w-full bg-light border-light rounded-md shadow-sm py-3 px-4 text-dark focus:outline-none focus:ring-2 focus:ring-accent transition duration-150" placeholder="John Doe" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-muted mb-1">Email Address</label>
-                            <input type="email" name="email" id="email" class="block w-full bg-light border-light rounded-md shadow-sm py-3 px-4 text-dark focus:outline-none focus:ring-2 focus:ring-accent transition duration-150" placeholder="you@example.com" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-muted mb-1">Message</label>
-                            <textarea name="message" id="message" rows="4" class="block w-full bg-light border-light rounded-md shadow-sm py-3 px-4 text-dark focus:outline-none focus:ring-2 focus:ring-accent transition duration-150" placeholder="I'm interested in learning more about the 2-bedroom units..." required></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-lg font-semibold text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-offset-2 ring-accent transition duration-300">
-                                Send Inquiry
-                            </button>
-                        </div>
-                    </form>
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-light">
+                        <h2 class="text-3xl font-bold text-center mb-2 text-dark">Schedule a Viewing</h2>
+                        <p class="text-center text-muted mb-8">Let us know when you're available for a tour.</p>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-muted mb-1">Full Name</label>
+                                <input type="text" name="name" id="name" class="block w-full bg-light border-light rounded-md shadow-sm py-3 px-4 text-dark focus:outline-none focus:ring-2 focus:ring-accent transition duration-150" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-muted mb-1">Email Address</label>
+                                <input type="email" name="email" id="email" class="block w-full bg-light border-light rounded-md shadow-sm py-3 px-4 text-dark focus:outline-none focus:ring-2 focus:ring-accent transition duration-150" placeholder="you@example.com" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-muted mb-1">Message</label>
+                                <textarea name="message" id="message" rows="4" class="block w-full bg-light border-light rounded-md shadow-sm py-3 px-4 text-dark focus:outline-none focus:ring-2 focus:ring-accent transition duration-150" placeholder="I'm interested in learning more about the 2-bedroom units..." required></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-lg font-semibold text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-offset-2 ring-accent transition duration-300">
+                                    Send Inquiry
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <section id="contact" class="py-20 md:py-28 bg-light">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-12">For More Information, Contact:</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg">
+                        <div class="flex flex-col items-center">
+                            <img src="https://placehold.co/128x128/005A9E/FFFFFF?text=JC" alt="Placeholder image for John Coplen" class="rounded-full mb-6 shadow-md">
+                            <h3 class="text-2xl font-semibold text-dark mb-2">John Coplen</h3>
+                            <p class="text-muted">M: <a href="tel:410-591-0911" class="hover:text-accent transition-colors">410-591-0911</a></p>
+                            <p class="text-muted"><a href="mailto:john.coplen@johncoplengroup.com" class="hover:text-accent transition-colors break-words">john.coplen@johncoplengroup.com</a></p>
+                        </div>
+                         <div class="flex flex-col items-center">
+                            <img src="https://placehold.co/128x128/005A9E/FFFFFF?text=KK" alt="Placeholder image for Karen Kutchins" class="rounded-full mb-6 shadow-md">
+                            <h3 class="text-2xl font-semibold text-dark mb-2">Karen Kutchins</h3>
+                            <p class="text-muted">M: <a href="tel:301-275-2255" class="hover:text-accent transition-colors">301-275-2255</a></p>
+                            <p class="text-muted"><a href="mailto:k2kuchins@aol.com" class="hover:text-accent transition-colors">k2kuchins@aol.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
     <footer class="bg-dark py-12">
         <div class="container mx-auto px-6 text-center text-gray-400">
              <p>&copy; 2024 Estridge Murtagh Coplen. All Rights Reserved.</p>
              <div class="flex justify-center items-center mt-6 space-x-12">
-                 <!-- MODIFIED: Increased height of the logo -->
                  <img src="Realtor EHO Black Transparent.png" alt="Realtor and Equal Housing Opportunity logos" class="h-16 filter invert opacity-70 mix-blend-lighten" onerror="this.onerror=null;this.src='https://placehold.co/200x50/cccccc/000000?text=Realtor+EHO';">
-                 <!-- Grouped logo with phone number -->
                  <div class="flex flex-col items-center">
                     <img src="LFRE_Horz_Black.png" alt="Long and Foster Real Estate logo" class="h-10 filter invert opacity-70 mix-blend-lighten"  onerror="this.onerror=null;this.src='https://placehold.co/200x50/cccccc/000000?text=Long+and+Foster';">
                     <a href="tel:202-299-0424" class="mt-2 text-sm text-gray-400 hover:text-white transition-colors">202-299-0424</a>
