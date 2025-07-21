@@ -324,6 +324,14 @@
 
     </main>
 
+    <!-- Thank You Message Overlay -->
+    <div id="thank-you-overlay" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4 cursor-pointer">
+        <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl text-center max-w-md w-full">
+            <h2 class="text-3xl font-bold mb-4 text-dark">Thank you for your interest!</h2>
+            <p class="text-lg text-muted">An agent will contact you soon.</p>
+        </div>
+    </div>
+
     <!-- Footer Section -->
     <footer class="bg-dark py-12">
         <div class="container mx-auto px-6 text-center text-gray-400">
@@ -370,7 +378,7 @@
             link.addEventListener('click', closeMenu);
         });
 
-        // Smooth scrolling for anchor links (already handled by `scroll-behavior: smooth` in HTML tag)
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -382,6 +390,30 @@
                 }
             });
         });
+
+        // Contact Form Submission
+        const contactForm = document.querySelector('#contact-form form');
+        const thankYouOverlay = document.getElementById('thank-you-overlay');
+
+        if (contactForm && thankYouOverlay) {
+            contactForm.addEventListener('submit', function(e) {
+                // Prevent the default form submission which reloads the page
+                e.preventDefault();
+
+                // Show the thank you message overlay
+                thankYouOverlay.classList.remove('hidden');
+                
+                // Optional: Reset the form fields after a short delay
+                setTimeout(() => {
+                    contactForm.reset();
+                }, 300);
+            });
+
+            // Allow user to click the overlay to close it
+            thankYouOverlay.addEventListener('click', () => {
+                thankYouOverlay.classList.add('hidden');
+            });
+        }
     </script>
 </body>
 </html>
